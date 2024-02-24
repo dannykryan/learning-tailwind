@@ -13,14 +13,20 @@ export default function Home() {
         <h2 className="text-white bg-mustard font-bold text-center">Goodbye World!</h2>
 
         <div className="text-center mt-6">
-          <h1>This is a h1</h1>
-          <h2>This is a h2</h2>
-          <h3>This is a h3</h3>
-          <p>A regular Paragraph</p>
-          <p>A description paragraph</p>
-          <p>A little note</p>
+          <h1 className="text-3xl roboto">This is a h1 in Roboto</h1>
+          <h2 className="text-2xl capitalize">This is a h2, capitalized</h2>
+          <h3 className="text-xl leading-loose">This is a h3</h3>
+          <p className="text-base uppercase">A regular Paragraph, uppercase</p>
+          <p className="text-base underline">An underlined Paragraph</p>
+          <p className="text-base underline underline-offset-4 decoration-red-500 decoration-double">A fancy underlined Paragraph</p>
+          <p className="text-base line-through">A line-through Paragraph</p>
+          <p className="text-base overline decoration-wavy decoration-2 decoration-blue-600 mt-2">An overline Paragraph with wave</p>
+          <p className="text-sm">A description paragraph</p>
+          <p className="text-xs">A little note</p>
+          <div className="mt-5 w-[400px] mx-auto">
+            <p className="text-3xl truncate">Truncated text: Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+          </div>
         </div>
-
     </>
   )
 }
