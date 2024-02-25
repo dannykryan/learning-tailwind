@@ -1,10 +1,13 @@
 import snowboarder from '../public/Assets/snowboarder.jpg'
+import cabin from '../public/Assets/yellow-cabin.jpg'
+import kitten from '../public/Assets/kitten.jpg'
 
 import Image from 'next/image'
 
 export default function Home() {
   return (
     <>
+    <div className="mb-16">
       <h1 className="lg:text-3xl md:text-xl font-bold underline text-center mt-10 selection:bg-fuchsia-300"> 
         Hello, World!
         </h1>
@@ -229,8 +232,8 @@ export default function Home() {
         </div>
 
         {/* Z-Index */}
-        <div className="text-white bg-slate-900 Parent mt-4">
-          <div className="container flex -space-x-3">
+        <div className="text-white bg-slate-900 Parent mt-4 py-2">
+          <div className="container flex -space-x-3 justify-center">
             <div className="w-16 h-16 rounded-full flex items-center justify-center bg-pink-500 shadow-lg ring-2 ring-white z-40">05</div>
             <div className="z-30 w-16 h-16 rounded-full flex items-center justify-center bg-pink-500 shadow-lg ring-2 ring-white">04</div>
             <div className="z-20 w-16 h-16 rounded-full flex items-center justify-center bg-pink-500 shadow-lg ring-2 ring-white">03</div>
@@ -240,21 +243,201 @@ export default function Home() {
         </div>
 
         {/* Object Position */}
-        <div className="container flex space-x-8 mt-4">
+        <div className="container flex space-x-8 mt-4 justify-center">
           <div className="text-center space-y-2">
             <h2>Object Center</h2>
-            <Image src={snowboarder} className="object-none mx-auto h-[200px] w-[200px] object-center rounded-full" alt="snowboarder" />
+            <Image src={kitten} className="object-none mx-auto h-[200px] w-[200px] object-center rounded-full" alt="kitten" />
           </div>
           <div className="text-center space-y-2">
             <h2>Object Top</h2>
-            <Image src={snowboarder} className="object-none mx-auto h-[200px] w-[200px] object-top rounded-full" alt="snowboarder" />
+            <Image src={kitten} className="object-none mx-auto h-[200px] w-[200px] object-top rounded-full" alt="kitten" />
           </div>
           <div className="text-center space-y-2">
             <h2>Object Left </h2>
-            <Image src={snowboarder} className="object-none mx-auto h-[200px] w-[200px] object-left rounded-full" alt="snowboarder" />
+            <Image src={kitten} className="object-none mx-auto h-[200px] w-[200px] object-left rounded-full" alt="kitten" />
           </div>
         </div>
 
+        {/* Borders */}
+        <div className="text-white bg-slate-900 Parent mt-4 text-center">
+          <header className="w-full border-t-8 border-x-8 border-b-4 border-green-300">Header</header>
+        </div>
+
+
+        {/* Borders can also be applied as dividers between elements: */}
+        <div className="text-white bg-slate-900 Parent mt-4 text-center">
+          <div className="divide-y divide-red-500">
+            <div>01</div>
+            <div>02</div>
+            <div>03</div>
+          </div>
+        </div>
+
+        <div className="text-green-500 bg-slate-900 Parent mt-4 text-center py-2">
+          <input type="text" className="border-2 border-rose-600 outline-none text-center" />
+        </div>
+
+        {/* Effects and Filters */}
+        
+        {/* Box Shadow */}
+        <div className="my-4 border-2 w-[180px] justify-center p-4 shadow-lg mx-auto">
+          <h1 className="text-2xl font-bold">Hello</h1>
+          <p className="text-lg">This is my div</p>
+          <button className="bg-teal-700 text-xl rounded-lg p-2 mt-4 shadow-teal-900/50 shadow-md hover:bg-teal-900 text-white">Say Hello</button>
+        </div>
+
+        {/* Opacity */}
+        <div className="bg-slate-900 text-white Parent mt-4 text-center">
+          <div className="container">
+            <div className="opacity-50">This is 50% opacity text</div>
+          </div>
+        </div>
+
+        {/* Mix Blend Mode */}
+        <div className="text-white Parent mt-4 py-2">
+          <div className="container flex -space-x-8 justify-center">
+            <div className="w-32 h-32 rounded-full flex items-center justify-center bg-green-500 shadow-lg z-40 mix-blend-multiply">05</div>
+            <div className="z-30 w-32 h-32 rounded-full flex items-center justify-center bg-sky-500 shadow-lg mix-blend-multiply">04</div>
+            <div className="z-20 w-32 h-32 rounded-full flex items-center justify-center bg-purple-500 shadow-lg mix-blend-multiply">03</div>
+            <div className="z-10 w-32 h-32 rounded-full flex items-center justify-center bg-red-500 shadow-lg mix-blend-multiply">02</div>
+            <div className="z-0 w-32 h-32 rounded-full flex items-center justify-center bg-orange-500 shadow-lg mix-blend-multiply">01</div>
+          </div>
+        </div>
+
+        {/* Filters: Blur */}
+        <div className="flex">
+          <div className="my-4 border-2 w-[180px] justify-center p-4 shadow-lg mx-auto text-center">
+            <Image src={kitten} alt="kitten" className="object-none h-[200px] mb-2" />
+            <h1 className="text-2xl font-bold">Normal</h1>
+          </div>
+
+          <div className="my-4 border-2 w-[180px] justify-center p-4 shadow-lg mx-auto text-center">
+            <Image src={kitten} alt="kitten" className="object-none h-[200px] mb-2 blur-sm" />
+            <h1 className="text-2xl font-bold">Blur-sm</h1>
+          </div>
+
+          <div className="my-4 border-2 w-[180px] justify-center p-4 shadow-lg mx-auto text-center">
+            <Image src={kitten} alt="kitten" className="object-none h-[200px] mb-2 blur-md" />
+            <h1 className="text-2xl font-bold">Blur-md</h1>
+          </div>
+
+          <div className="my-4 border-2 w-[180px] justify-center p-4 shadow-lg mx-auto text-center">
+            <Image src={kitten} alt="kitten" className="object-none h-[200px] mb-2 hue-rotate-90" />
+            <h1 className="text-2xl font-bold">hue-rotate-90</h1>
+          </div>
+        </div>
+
+        <div className="flex">
+          <div className="my-4 border-2 w-[180px] justify-center p-4 shadow-lg mx-auto text-center">
+            <Image src={kitten} alt="kitten" className="object-none h-[200px] mb-2 brightness-50" />
+            <h1 className="text-2xl font-bold">brightness-50%</h1>
+          </div>
+
+          <div className="my-4 border-2 w-[180px] justify-center p-4 shadow-lg mx-auto text-center">
+            <Image src={kitten} alt="kitten" className="object-none h-[200px] mb-2 brightness-125" />
+            <h1 className="text-2xl font-bold">brightness-125%</h1>
+          </div>
+
+          <div className="my-4 border-2 w-[180px] justify-center p-4 shadow-lg mx-auto text-center">
+            <Image src={kitten} alt="kitten" className="object-none h-[200px] mb-2 contrast-10" />
+            <h1 className="text-2xl font-bold">Contrast-10%</h1>
+          </div>
+
+          <div className="my-4 border-2 w-[180px] justify-center p-4 shadow-lg mx-auto text-center">
+            <Image src={kitten} alt="kitten" className="object-none h-[200px] mb-2 grayscale" />
+            <h1 className="text-2xl font-bold">Grayscale</h1>
+          </div>
+        </div>
+
+        <div className="flex">
+        <div className="my-4 border-2 w-[180px] justify-center p-4 shadow-lg mx-auto text-center">
+            <Image src={kitten} alt="kitten" className="object-none h-[200px] mb-2 invert" />
+            <h1 className="text-2xl font-bold">invert</h1>
+          </div>
+
+          <div className="my-4 border-2 w-[180px] justify-center p-4 shadow-lg mx-auto text-center">
+            <Image src={kitten} alt="kitten" className="object-none h-[200px] mb-2 sepia" />
+            <h1 className="text-2xl font-bold">sepia</h1>
+          </div>
+
+          <div className="my-4 border-2 w-[180px] justify-center p-4 shadow-lg mx-auto text-center">
+            <Image src={kitten} alt="kitten" className="object-none h-[200px] mb-2 invert hue-rotate-90" />
+            <h1 className="text-2xl font-bold">invert & hue-rotate</h1>
+          </div>
+
+          <div className="my-4 border-2 w-[180px] justify-center p-4 shadow-lg mx-auto text-center">
+            <Image src={kitten} alt="kitten" className="object-none h-[200px] mb-2 saturate-200" />
+            <h1 className="text-2xl font-bold">saturation 200%</h1>
+          </div>
+        </div>
+
+        {/* Transitions */}
+
+        <div className="flex justify-center mt-4 space-x-4">
+          <button className="transition-all duration-500 ease-in-out bg-green-500 hover:bg-red-500 rounded-lg p-4">Hover Me</button>
+
+          <button className="hover:-translate-y-1 hover:shadow-xl transition rounded-lg p-4 bg-rose-600 text-white">Hover Me</button>
+        </div>
+        
+        {/* Animation */}
+        <div className="flex justify-center mt-4 space-x-4">
+          <button className="hover:bg-green-500 hover:animate-spin hover:shadow-xl transition rounded-lg p-4 bg-rose-600 text-white mt-4">Spin!</button>
+
+          <button className="hover:animate-ping transition rounded-lg p-4 bg-blue-500 text-white mt-4">Ping!</button>
+        </div>
+      
+        {/* Animate a spinning svg */}
+        <div className="relative rounded-xl overflow-auto p-8">
+          <div className="flex items-center justify-center">
+            <button type="button" className="inline-flex items-center px-4 py-2 font-semibold leading-6 text-sm shadow rounded-md text-white bg-indigo-500 hover:bg-indigo-400 transition ease-in-out duration-150 cursor-not-allowed">
+              <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+              </svg>
+              Processing...
+            </button>
+          </div>
+        </div>
+
+        {/* Animate a pulsing circle */}
+        <div className="flex items-center justify-center">
+          <span className="relative inline-flex">
+            <button type="button" className="inline-flex items-center px-4 py-2 font-semibold leading-6 text-sm shadow rounded-md text-sky-500 bg-white dark:bg-slate-800 transition ease-in-out duration-150 cursor-not-allowed ring-1 ring-slate-900/10 dark:ring-slate-200/20">
+              Transactions
+            </button>
+            <span className="flex absolute h-3 w-3 top-0 right-0 -mt-1 -mr-1">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-3 w-3 bg-sky-500"></span>
+            </span>
+          </span>
+        </div>
+
+        {/* Pulsing Card Animation */}
+        <div className="relative rounded-xl overflow-auto p-8">
+          <div className="flex items-center justify-center">
+              <div className="bg-white dark:bg-slate-800 p-4 ring-1 ring-slate-900/5 rounded-lg shadow-lg max-w-xs w-full h-28">
+                <div className="flex space-x-4 animate-pulse">
+                  <div className="rounded-full bg-slate-200 dark:bg-slate-700 h-10 w-10"></div>
+                  <div className="flex-1 space-y-6 py-1">
+                    <div className="h-2 bg-slate-200 dark:bg-slate-700 rounded"></div>
+                    <div className="space-y-3">
+                      <div className="grid grid-cols-3 gap-4">
+                        <div className="h-2 bg-slate-200 dark:bg-slate-700 rounded col-span-2"></div>
+                        <div className="h-2 bg-slate-200 dark:bg-slate-700 rounded col-span-1"></div>
+                      </div>
+                      <div className="h-2 bg-slate-200 dark:bg-slate-700 rounded"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+
+
+
+
+
+      </div>
     </>
   )
 }
