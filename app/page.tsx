@@ -1,3 +1,5 @@
+import snowboarder from '../public/Assets/snowboarder.jpg'
+
 import Image from 'next/image'
 
 export default function Home() {
@@ -163,6 +165,96 @@ export default function Home() {
             </div>
           </div>
         </div>
+        {/* Layout Container */}
+        <div className="container mt-4">
+            <div className="col-span-3 md:col-span-2 bg-sky-500 p-6 rounded-lg">Content</div>
+        </div>
+
+        {/* Adding based on column count */}
+        <div className="h-[300px] text white Parent bg-slate-900 mt-4">
+          <div className="container columns-xs text-white">
+            <img src="https://images.unsplash.com/photo-1708516514746-9979b248d4bb?q=80&w=2014&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="snowboarder" className="h-[300px] mx-auto float-left" />
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora delectus saepe incidunt commodi recusandae, porro obcaecati, nobis repudiandae iure eum exercitationem rerum quam quas aliquam quae libero non itaque a!</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora delectus saepe incidunt commodi recusandae, porro obcaecati, nobis repudiandae iure eum exercitationem rerum quam quas aliquam quae libero non itaque a!</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora delectus saepe incidunt commodi recusandae, porro obcaecati, nobis repudiandae iure eum exercitationem rerum quam quas aliquam quae libero non itaque a!</p>
+          </div>
+        </div>
+
+        {/* Using columns with images */}
+        <div className="h-[200px] text white Parent bg-slate-900 mt-4">
+          <div className="container columns-xs text-white pt-2">
+            <Image src={snowboarder} className="object-cover h-32 w-32 mx-auto float-left mr-2" alt="snowboarder"/>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora delectus saepe incidunt commodi recusandae, porro obcaecati, nobis repudiandae iure eum exercitationem rerum quam quas aliquam quae libero non itaque a!</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora delectus saepe incidunt commodi recusandae, porro obcaecati, nobis repudiandae iure eum exercitationem rerum quam quas aliquam quae libero non itaque a!</p>
+          </div>
+        </div>
+        
+        {/* Position */}
+        <div className="text-white Parent bg-slate-900 h-[200px] mt-4">
+          <div className="container px-2">
+            <div className="relative top-8 w-32 h-32 p-8 bg-red-500 rounded-lg">
+            <div className="absolute -top-2 -left-2 w-24 h-24 bg-green-500 rounded-lg"></div>
+            </div>
+          </div>
+        </div>
+
+        {/* Overflow */}
+        <div className="container w-screen flex">
+        <div className="container w-72 h-48 overflow-auto">
+          <h1 className="text-xl font-bold">Overflow:</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil delectus nulla ullam culpa. Tenetur sint, odit qui possimus eveniet nam unde! Facere dolorem inventore accusamus modi iure, quia excepturi itaque!
+          Iure tempore totam ratione minima sint dolorum? Magni expedita praesentium adipisci ullam doloribus obcaecati/</p>
+        </div>
+        <div className="container w-72 h-48 overflow-x-auto">
+          <h1 className="text-xl font-bold">Overflow X Auto:</h1>
+          <div className="container flex">
+          <Image src={snowboarder} className="object-cover h-32 w-32 mx-auto float-left mr-2" alt="snowboarder"/>
+          <Image src={snowboarder} className="object-cover h-32 w-32 mx-auto float-left mr-2" alt="snowboarder"/>
+          <Image src={snowboarder} className="object-cover h-32 w-32 mx-auto float-left mr-2" alt="snowboarder"/>
+          <Image src={snowboarder} className="object-cover h-32 w-32 mx-auto float-left mr-2" alt="snowboarder"/>
+          <Image src={snowboarder} className="object-cover h-32 w-32 mx-auto float-left mr-2" alt="snowboarder"/>
+          </div>
+        </div>
+        </div>
+
+        {/* Making Elements Visible */}
+        <div className="text-white bg-slate-900 Parent mt-4">
+          <div className="container">
+            <div className="grid grid-cols-3 gap-4">
+              <div className="bg-teal-500">01</div>
+              <div className="invisible bg-teal-500">02</div>
+              <div className="bg-teal-500">03</div>
+            </div>
+          </div>
+        </div>
+
+        {/* Z-Index */}
+        <div className="text-white bg-slate-900 Parent mt-4">
+          <div className="container flex -space-x-3">
+            <div className="w-16 h-16 rounded-full flex items-center justify-center bg-pink-500 shadow-lg ring-2 ring-white z-40">05</div>
+            <div className="z-30 w-16 h-16 rounded-full flex items-center justify-center bg-pink-500 shadow-lg ring-2 ring-white">04</div>
+            <div className="z-20 w-16 h-16 rounded-full flex items-center justify-center bg-pink-500 shadow-lg ring-2 ring-white">03</div>
+            <div className="z-10 w-16 h-16 rounded-full flex items-center justify-center bg-pink-500 shadow-lg ring-2 ring-white">02</div>
+            <div className="z-0 w-16 h-16 rounded-full flex items-center justify-center bg-pink-500 shadow-lg ring-2 ring-white">01</div>
+          </div>
+        </div>
+
+        {/* Object Position */}
+        <div className="container flex space-x-8 mt-4">
+          <div className="text-center space-y-2">
+            <h2>Object Center</h2>
+            <Image src={snowboarder} className="object-none mx-auto h-[200px] w-[200px] object-center rounded-full" alt="snowboarder" />
+          </div>
+          <div className="text-center space-y-2">
+            <h2>Object Top</h2>
+            <Image src={snowboarder} className="object-none mx-auto h-[200px] w-[200px] object-top rounded-full" alt="snowboarder" />
+          </div>
+          <div className="text-center space-y-2">
+            <h2>Object Left </h2>
+            <Image src={snowboarder} className="object-none mx-auto h-[200px] w-[200px] object-left rounded-full" alt="snowboarder" />
+          </div>
+        </div>
+
     </>
   )
 }

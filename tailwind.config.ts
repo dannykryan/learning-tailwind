@@ -11,6 +11,9 @@ const config: Config = {
       colors: {
         mustard: '#fcba03'
       },
+      container: {
+        center: true,
+      },
     },
   },
   plugins: [],
